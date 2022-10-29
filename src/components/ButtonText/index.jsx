@@ -1,4 +1,5 @@
 import { Container } from './styles';
+import { RiArrowLeftLine } from "react-icons/ri";
 
 export function ButtonText({ title, isActive = false, ...rest }) {
   return(
@@ -6,7 +7,9 @@ export function ButtonText({ title, isActive = false, ...rest }) {
     type="button"
     isActive={isActive}
     {...rest}
+    to="#"
     >
+      <RiArrowLeftLine />
       {title}
     </Container>
   );

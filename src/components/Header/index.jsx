@@ -1,5 +1,4 @@
-import { Container, Brand, Star, Search, Profile } from './styles';
-import { ButtonText } from '../ButtonText';
+import { Container, Brand, Star, Search, Profile, SignOut } from './styles';
 
 export function Header() {
   return(
@@ -16,7 +15,9 @@ export function Header() {
       <Profile> 
         <div>
           <strong>Raul Effting</strong>
-          <ButtonText title="sair"/>
+          <SignOut> 
+            sair
+          </SignOut>
         </div>
         <img src="https://github.com/rauleffting.png" alt="Foto do usuário" />
       </Profile>

@@ -5,6 +5,7 @@ export default {
     BG_700: "#262529",
     BG_600: "#312E38",
 
-    PINK: "#FF859B",
+    PINK: "rgba(255, 133, 155, 1)",
+    LOW_PINK: "rgba(255, 133, 155, 0.05)"
   }
 }
