@@ -48,24 +48,6 @@ export const Search = styled.div`
   align-items: center;
 
   width: 100%;
-
-  > input {
-    background-color: ${({ theme }) => theme.COLORS.BG_700};
-
-    border: none;
-    border-radius: 10px;
-    
-    height: 56px;
-    width: 100%;
-    padding: 19px 24px;
-
-    &:placeholder {
-      color: "#948F99";
-
-      font-size: 14px;
-    }
-
-  }
 `;
 
 export const Profile = styled.div`

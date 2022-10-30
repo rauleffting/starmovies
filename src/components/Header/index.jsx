@@ -1,4 +1,5 @@
 import { Container, Brand, Star, Search, Profile, SignOut } from './styles';
+import { Input } from '../../components/Input';
 
 export function Header() {
   return(
@@ -9,7 +10,7 @@ export function Header() {
       </Brand>
 
       <Search>
-        <input type="text" placeholder="Pesquisar pelo título" />
+        <Input type="text" placeholder="Pesquisar pelo título" />
       </Search>
 
       <Profile> 

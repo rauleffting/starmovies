@@ -2,6 +2,7 @@ import { Container, Menu, Form, InputWrapper, TextArea, Markers, Buttons } from 
 
 import { Header } from '../../components/Header';
 import { ButtonText } from '../../components/ButtonText';
+import { Input } from '../../components/Input';
 import { Marker } from '../../components/Marker';
 import { Button } from '../../components/Button';
 
@@ -21,8 +22,8 @@ export function New() {
           </header>
 
           <InputWrapper>
-            <input type="text" placeholder="Título"/>
-            <input type="text" placeholder="Sua nota (de 0 a 5)"/>
+            <Input type="text" placeholder="Título"/>
+            <Input type="text" placeholder="Sua nota (de 0 a 5)"/>
           </InputWrapper>
           
           <TextArea placeholder="Observações"/>

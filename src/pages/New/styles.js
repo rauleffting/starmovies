@@ -51,24 +51,6 @@ export const InputWrapper = styled.div`
   justify-content: space-between;
   
   margin-bottom: 40px;
-  
-  > input {
-    width: 100%;
-    padding: 18px 16px;
-
-    background: #262529;
-
-    border: none;
-    border-radius: 10px;
-
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-
-    color: #948F99;
-  }
 `;
 
 export const TextArea = styled.textarea`
