@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
+import { Link } from 'react-router-dom';
 
-export const Container = styled.div`
+export const Container = styled(Link)`
   background-color: ${({ theme }) => theme.COLORS.LOW_PINK};
 
   display: flex;
@@ -11,6 +12,7 @@ export const Container = styled.div`
   height: 223px;
   width: 100%;
   padding: 32px;
+  margin-bottom: 15px;
 
   border-radius: 16px;
   text-align: justify;

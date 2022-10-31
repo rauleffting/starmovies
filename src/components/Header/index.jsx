@@ -1,10 +1,12 @@
 import { Container, Brand, Star, Search, Profile, SignOut } from './styles';
 import { Input } from '../../components/Input';
 
+import { Link } from 'react-router-dom';
+
 export function Header() {
   return(
     <Container>
-      <Brand to="#">
+      <Brand to="/">
         <Star />
         <h1>StarMovies</h1>
       </Brand>
@@ -20,7 +22,9 @@ export function Header() {
             sair
           </SignOut>
         </div>
-        <img src="https://github.com/rauleffting.png" alt="Foto do usuário" />
+        <Link to="/profile">
+          <img src="https://github.com/rauleffting.png" alt="Foto do usuário" />
+        </Link>
       </Profile>
     </Container>
   );

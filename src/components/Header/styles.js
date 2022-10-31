@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { RiStarLine } from 'react-icons/ri';
 
+import { Link } from 'react-router-dom';
+
 export const Container = styled.header`
   grid-area: header;
 
@@ -13,15 +15,13 @@ export const Container = styled.header`
   justify-content: space-between;
 
   padding: 24px 123px;
-
-  div + div {
-    margin-left: 64px;
-  }
 `;
 
-export const Brand = styled.div`
+export const Brand = styled(Link)`
   display: flex;
   align-items: center;
+
+  margin-right: 64px;
   
   cursor: pointer;
 
@@ -54,6 +54,8 @@ export const Profile = styled.div`
   display: flex;
   align-items: center;
 
+  margin-left: 64px;
+
   > div {
     display: flex;
     flex-direction: column;
@@ -70,7 +72,7 @@ export const Profile = styled.div`
     }
   }
 
-  > img {
+  img {
     margin-left: 9px;
     width: 64px;
     height: 64px;

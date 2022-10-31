@@ -11,7 +11,7 @@ export const Container = styled.button`
   font-weight: 500;
   font-size: 16px;
   line-height: 21px;
-  color: ${({theme, del}) => del ? theme.COLORS.PINK :  theme.COLORS.BG_600};
+  color: ${({theme, bgBlack}) => bgBlack ? theme.COLORS.PINK :  theme.COLORS.BG_600};
 
-  background-color: ${({theme, del}) => del ? '#0D0C0F' :  theme.COLORS.PINK};
+  background-color: ${({theme, bgBlack}) => bgBlack ? '#0D0C0F' :  theme.COLORS.PINK};
 `;

@@ -7,7 +7,7 @@ export function ButtonText({ title, isActive = false, ...rest }) {
     type="button"
     isActive={isActive}
     {...rest}
-    to="#"
+    to="/"
     >
       <RiArrowLeftLine />
       {title}

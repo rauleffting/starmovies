@@ -1,10 +1,10 @@
 import { Container } from './styles';
 
-export function Button({ title, del, ...rest}) {
+export function Button({ title, bgBlack, ...rest}) {
   return(
     <Container
       type="button"
-      del={del}
+      bgBlack={bgBlack}
       {...rest}
     >
       {title}

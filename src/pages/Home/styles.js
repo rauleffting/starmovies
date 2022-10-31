@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { FiPlus } from 'react-icons/fi';
 
+import { Link } from 'react-router-dom';
+
 export const Container = styled.div`
   width: 100%;
   height: 100vh;
@@ -30,22 +32,31 @@ export const Menu = styled.div`
   }
 `;
 
-export const NewMovie = styled.div`
+export const NewMovie = styled(Link)`
   display: flex;
   align-items: center;
 
   padding: 14px 32px;
   border-radius: 8px;
 
+  color: #1C1B1E;
   background-color: ${({ theme }) => theme.COLORS.PINK};
 
   > span {
+    font-family: 'Roboto Slab';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 21px;
 
     margin-left: 8px;
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+
+    color: #1C1B1E;
   }
 `;
 

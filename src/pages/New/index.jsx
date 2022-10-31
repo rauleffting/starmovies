@@ -36,7 +36,7 @@ export function New() {
           </Markers>
 
           <Buttons>
-            <Button del title="Excluir filme"/>
+            <Button bgBlack title="Excluir filme"/>
             <Button title="Salvar alterações"/>
           </Buttons>
         </Form>

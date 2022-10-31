@@ -11,7 +11,7 @@ export function Home() {
       <Menu>
         <h1>Meus filmes</h1>
 
-        <NewMovie to='#'>
+        <NewMovie to='/new'>
           <Plus />
           <span>Adicionar filme</span>
         </NewMovie>

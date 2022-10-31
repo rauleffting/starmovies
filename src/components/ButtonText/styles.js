@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-export const Container = styled.button`
+export const Container = styled(Link)`
   display: flex;
   align-items: center;
 
@@ -16,6 +17,7 @@ export const Container = styled.button`
     margin-right: 8px;
   }
 
+  font-family: 'Roboto Slab';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
