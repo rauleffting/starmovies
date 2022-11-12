@@ -15,8 +15,8 @@ import { useAuth } from '../../hooks/auth';
 export function Profile() {
   const { user, updateProfile } = useAuth();
 
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
+  const [name, setName] = useState(user.name);
+  const [email, setEmail] = useState(user.email);
   const [oldPassword,setOldPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
 
