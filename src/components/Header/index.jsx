@@ -1,9 +1,20 @@
 import { Container, Brand, Star, Search, Profile, SignOut } from './styles';
 import { Input } from '../../components/Input';
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+
+import { useAuth } from '../../hooks/auth';
 
 export function Header() {
+
+  const { signOut } = useAuth();
+  const navigation = useNavigate();
+
+  function handleSignOut(){
+    navigation("/");
+    signOut();
+  }
+
   return(
     <Container>
       <Brand to="/">
@@ -18,7 +29,7 @@ export function Header() {
       <Profile> 
         <div>
           <strong>Raul Effting</strong>
-          <SignOut> 
+          <SignOut onClick={handleSignOut}> 
             sair
           </SignOut>
         </div>
