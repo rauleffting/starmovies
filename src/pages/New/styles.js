@@ -76,13 +76,13 @@ export const TextArea = styled.textarea`
 
 export const Markers = styled.div`
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 24px;
 
   margin-bottom: 40px;
   padding: 16px;
   width: 100%;
-  height: 88px;
 
   background: #0D0C0F;
   border-radius: 8px;

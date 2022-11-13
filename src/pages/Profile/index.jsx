@@ -6,7 +6,7 @@ import { Container, Form, Avatar } from './styles';
 import { ButtonText } from '../../components/ButtonText';
 import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
-import avatarPlaceholder from '../../assets/avatar_placeholder.png';
+import avatarPlaceHolder from '../../assets/avatar_placeholder.png';
 
 import { api } from '../../services/api';
 import { useNavigate } from 'react-router-dom';
@@ -20,7 +20,7 @@ export function Profile() {
   const [oldPassword,setOldPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
 
-  const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder;
+  const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceHolder;
   const [avatar, setAvatar] = useState(avatarUrl);
   const [avatarFile, setAvatarFile] = useState(null);
 

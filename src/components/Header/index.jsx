@@ -1,19 +1,24 @@
+import { useState } from 'react';
 import { Container, Brand, Star, Search, Profile, SignOut } from './styles';
 import { Input } from '../../components/Input';
 
 import { Link, useNavigate } from 'react-router-dom';
 
+import { api } from '../../services/api';
 import { useAuth } from '../../hooks/auth';
+import avatarPlaceHolder from '../../assets/avatar_placeholder.png';
 
-export function Header() {
+export function Header({children}) {
 
-  const { signOut } = useAuth();
+  const { signOut, user } = useAuth();
   const navigation = useNavigate();
 
   function handleSignOut(){
     navigation("/");
     signOut();
   }
+
+  const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceHolder;
 
   return(
     <Container>
@@ -23,18 +28,20 @@ export function Header() {
       </Brand>
 
       <Search>
-        <Input type="text" placeholder="Pesquisar pelo título" />
+        {
+        children ? children : <Input placeholder="Pesquisar pelo título" />
+        }
       </Search>
 
       <Profile> 
         <div>
-          <strong>Raul Effting</strong>
+          <strong>{user.name}</strong>
           <SignOut onClick={handleSignOut}> 
             sair
           </SignOut>
         </div>
         <Link to="/profile">
-          <img src="https://github.com/rauleffting.png" alt="Foto do usuário" />
+          <img src={avatarUrl} alt="Foto do usuário" />
         </Link>
       </Profile>
     </Container>
