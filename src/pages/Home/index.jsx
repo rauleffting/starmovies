@@ -54,6 +54,7 @@ export function Home() {
                 key={String(note.id)}
                 data={note}
                 onClick={() => handlePreview(note.id)}
+                className="movie"
               />
             ))
           }
