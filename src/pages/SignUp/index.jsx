@@ -63,7 +63,7 @@ export function SignUp(){
           />
           <Input 
             placeholder="Senha"
-            type="text"
+            type="password"
             icon={FiLock}
             onChange={event => setPassword(event.target.value)}
           />

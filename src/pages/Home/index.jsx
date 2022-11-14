@@ -49,6 +49,7 @@ export function Home() {
       <Content className="content">
         <main>
           {
+            notes &&
             notes.map( note => (
               <Movie 
                 key={String(note.id)}

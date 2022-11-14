@@ -12,6 +12,7 @@ export const Container = styled.div`
   "header"
   "menu"
   "content";
+  overflow: hidden;
 
   .content::-webkit-scrollbar {
     width: 8px;
@@ -27,6 +28,7 @@ export const Menu = styled.div`
 
   display: flex;
   justify-content: space-between;
+  max-height: 138px;
 
   padding: 50px 123px 40px;
 
@@ -43,6 +45,8 @@ export const Menu = styled.div`
 export const NewMovie = styled(Link)`
   display: flex;
   align-items: center;
+
+  max-height: 48px;
 
   padding: 14px 32px;
   border-radius: 8px;
@@ -77,6 +81,7 @@ export const Content = styled.div`
   grid-area: content;
   margin: 0px 123px 0;
   padding-bottom: 59px;
+  min-height: 550px;
 
   overflow-y: auto;
 
