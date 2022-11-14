@@ -1,6 +1,6 @@
 # :star: StarMovies
 
-## Front-end - Movie-API
+## Front-end / Movie-API
 
 Uma aplicação completa com Reactjs e Node, em que o usuário pode cadastrar seus filmes prediletos com algumas informações.
 
