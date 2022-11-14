@@ -8,7 +8,17 @@ export const Container = styled.div`
   grid-template-areas:
   "header"
   "menu"
-  "form";
+  "content";
+
+  overflow: hidden;
+
+  .content::-webkit-scrollbar {
+    width: 8px;
+  }
+  .content::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.COLORS.PINK};
+    border-radius: 8px;
+  }
 `;
 
 export const Menu = styled.div`
@@ -16,11 +26,18 @@ export const Menu = styled.div`
   margin: 40px 123px 0;
 `;
 
+export const Content = styled.div`
+  grid-area:content;
+
+  overflow-y: scroll;
+
+  margin: 24px 123px 0;
+`;
+
 export const Form = styled.form`
   grid-area: form;
-  margin: 24px 123px 0;
 
-  overflow-y: auto;
+  margin-right: 16px;
 
   > header > h1 {
     font-style: normal;

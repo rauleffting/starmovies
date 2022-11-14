@@ -3,11 +3,9 @@ import { Tag } from '../Tag';
 
 import { RiStarLine, RiStarFill } from 'react-icons/ri';
 
-import { Link } from 'react-router-dom';
-
 export function Movie({ data, ...rest }) {
   return(
-      <Container {...rest} to="preview">
+      <Container {...rest}>
         <h1>{data.title}</h1>
         
           {
@@ -83,8 +81,8 @@ export function Movie({ data, ...rest }) {
           data.tags &&
           <footer>
             {
-              data.tags.map( marker => 
-                <Tag key={marker.id} name={marker.name}/>  
+              data.tags.map( tag => 
+                <Tag key={tag.id} name={tag.name}/>  
               )
             }
           </footer>

@@ -2,8 +2,8 @@ import { Routes, Route } from 'react-router-dom';
 
 import { Home } from '../pages/Home';
 import { New } from '../pages/New';
-import { Preview } from '../pages/Preview';
 import { Profile } from '../pages/Profile';
+import { Preview } from '../pages/Preview';
 
 export function AppRoutes() {
   return(

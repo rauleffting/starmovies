@@ -11,20 +11,20 @@ import { Input } from '../../components/Input';
 
 export function Home() {
   const [search, setSearch] = useState("");
-  const [movieNotes, setMovieNotes] = useState([]);
+  const [notes, setNotes] = useState([]);
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    async function fetchMovieNotes(){
-      const response = await api.get(`/movie_notes?title=${search}`)
-      setMovieNotes(response.data)
+    async function fetchNotes(){
+      const response = await api.get(`/notes?title=${search}`)
+      setNotes(response.data)
     }
 
-    fetchMovieNotes()
+    fetchNotes()
   }, [search]);
 
-  function handleDetails(id){
+  function handlePreview(id){
     navigate(`/preview/${id}`);
   }
 
@@ -46,16 +46,18 @@ export function Home() {
         </NewMovie>
       </Menu>
 
-      <Content>
-        {
-          movieNotes.map( movieNote => (
-            <Movie 
-              key={String(movieNote.id)}
-              data={movieNote}
-              onClick={() => handleDetails(movieNote.id)}
-            />
-          ))
-        }
+      <Content className="content">
+        <main>
+          {
+            notes.map( note => (
+              <Movie 
+                key={String(note.id)}
+                data={note}
+                onClick={() => handlePreview(note.id)}
+              />
+            ))
+          }
+        </main>
       </Content>
 
     </Container>

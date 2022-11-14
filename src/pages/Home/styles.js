@@ -12,6 +12,14 @@ export const Container = styled.div`
   "header"
   "menu"
   "content";
+
+  .content::-webkit-scrollbar {
+    width: 8px;
+  }
+  .content::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.COLORS.PINK};
+    border-radius: 8px;
+  }
 `;
 
 export const Menu = styled.div`
@@ -67,11 +75,12 @@ export const Plus = styled(FiPlus)`
 
 export const Content = styled.div`
   grid-area: content;
-  padding: 0px 123px 59px;
+  margin: 0px 123px 0;
+  padding-bottom: 59px;
 
   overflow-y: auto;
 
-  div + div {
-    margin-top: 24px;
+  > main {
+    margin-right: 8px;
   }
 `;

@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { api } from '../../services/api';
 
-import { Container, Menu, Form, InputWrapper, TextArea, Markers, Buttons } from './styles';
+import { Container, Menu, Content, Form, InputWrapper, TextArea, Markers, Buttons } from './styles';
 
 import { Header } from '../../components/Header';
 import { ButtonText } from '../../components/ButtonText';
@@ -16,8 +16,8 @@ export function New() {
   const [rating, setRating] = useState("");
   const [comments, setComments] = useState("");
 
-  const [markers, setMarkers] = useState([]);
-  const [newMarker, setNewMarker] = useState("");
+  const [tags, setTags] = useState([]);
+  const [newTag, setNewTag] = useState("");
 
   const navigate = useNavigate();
 
@@ -25,16 +25,16 @@ export function New() {
     navigate(-1);
   }
 
-  function handleAddMarker(){
-    setMarkers(prevState => [...prevState, newMarker]);
-    setNewMarker("");
+  function handleAddTag(){
+    setTags(prevState => [...prevState, newTag]);
+    setNewTag("");
   }
 
-  function handleRemoveMarker(deletedMarker){
-    setMarkers(prevState => prevState.filter(marker => marker !== deletedMarker))
+  function handleRemoveTag(deletedTag){
+    setTags(prevState => prevState.filter(tag => tag !== deletedTag))
   }
 
-  async function handleNewMovieNote(){
+  async function handleNewNote(){
     if(!title){
       return alert("Digite o título da nota.")
     }
@@ -43,18 +43,22 @@ export function New() {
       return alert("Dê uma nota de 0 a 5.")
     }
 
-    if(newMarker){
+    if(newTag){
       return alert("Você deixou um marcador no campo para adicionar, mas não clicou em adicionar. Clique para adicionar ou deixe o campo vazio.")
     }
 
-    await api.post("/movie_notes", {
+    await api.post("/notes", {
       title,
       rating,
       comments,
-      markers
+      tags
     });
 
     alert("Filme cadastrado com sucesso!");
+    navigate(-1);
+  }
+
+  function handleRemoveNote(){
     navigate(-1);
   }
 
@@ -69,7 +73,7 @@ export function New() {
         />
       </Menu>
 
-      <main>
+      <Content className="content">
         <Form>
           <header>
             <h1>Novo filme</h1>
@@ -100,32 +104,36 @@ export function New() {
 
             <Markers>
               {
-                markers.map((marker, index) => (
-                  <Marker 
+                tags.map((tag, index) => (
+                  <Marker
                     key={String(index)}
-                    value={marker}
-                    onClick={() => handleRemoveMarker(marker)}
+                    value={tag}
+                    onClick={() => handleRemovetag(tag)}
                   />
                 ))
               }
-              <Marker 
+              <Marker
                 isNew 
                 placeholder="Novo marcador"
-                value={newMarker}
-                onChange={event => setNewMarker(event.target.value)}
-                onClick={handleAddMarker}
+                value={newTag}
+                onChange={event => setNewTag(event.target.value)}
+                onClick={handleAddTag}
               />
             </Markers>
 
           <Buttons>
-            <Button bgBlack title="Excluir filme"/>
+            <Button 
+              bgBlack 
+              title="Excluir filme"
+              onClick={handleRemoveNote}
+            />
             <Button 
               title="Salvar alterações"
-              onClick={handleNewMovieNote}
+              onClick={handleNewNote}
             />
           </Buttons>
         </Form>
-      </main>
+      </Content>
     </Container>
   );
 }
