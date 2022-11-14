@@ -83,4 +83,12 @@ export const Content = styled.div`
   > main {
     margin-right: 8px;
   }
+  
+   .movie{
+    cursor: pointer;
+  }
+
+  .movie:hover {
+    filter: brightness(0.8);
+  }
 `;
