@@ -6,6 +6,8 @@ Uma aplicação completa com Reactjs e Node, em que o usuário pode cadastrar in
 
 Link para acessar o código [Back-end](https://github.com/rauleffting/api_movies)!
 
+Sinta-se livre para testar: https://starmovies94.netlify.app/
+
 ### Tecnologias utilizadas no Front-end:
 - React
 - Vite
