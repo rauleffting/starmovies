@@ -1,14 +1,14 @@
 # :star: StarMovies
 
-## Front-end / Movie-API
+## Front-end / StarMovies-API
 
-Uma aplicação completa com Reactjs e Node, em que o usuário pode cadastrar informações sobre os seus filmes favoritos.
+A complete application with Reactjs and Node, in which the user can register information about his favorite movies.
 
-Link para acessar o código [Back-end](https://github.com/rauleffting/api_movies)!
+Link to access the [Back-end](https://github.com/rauleffting/api_movies)!
 
-Sinta-se livre para testar: https://starmovies94.netlify.app/
+Feel free to test: https://starmovies94.netlify.app/
 
-### Tecnologias utilizadas no Front-end:
+### Front-end technologies used:
 - React
 - Vite
 - HTML
