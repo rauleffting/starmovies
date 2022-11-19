@@ -15,7 +15,7 @@ function AuthProvider({children}) {
 
       localStorage.setItem("@starmovies:user", JSON.stringify(user));
 
-      localStorage.setItem("@starmovies:token", JSON.stringify(token));
+      localStorage.setItem("@starmovies:token", token);
 
       api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 
