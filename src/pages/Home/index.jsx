@@ -17,7 +17,7 @@ export function Home() {
 
   useEffect(() => {
     async function fetchNotes(){
-      const response = await api.get(`/notes?tags=${search}`);
+      const response = await api.get(`/notes?title=${search}`);
       setNotes(response.data);
     }
 
